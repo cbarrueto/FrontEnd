@@ -3,7 +3,7 @@
         <h1>¡Bienvenido a Productos! </h1>
     </div>
   </template>
-  
+
 <script>
 export default {
     name:'Home',
@@ -27,11 +27,13 @@ export default {
   }
   .greetings h1{
     font-size: 50px;
-    color: #283747;
+    color: red;
+    /* color: #283747; */
   }
   .greetings span{
-    color: crimson;
+    color: red;
     font-weight: bold;
   }
+
   </style>
   
