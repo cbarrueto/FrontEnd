@@ -1,9 +1,10 @@
 <template>
   <div id ="app" class="app">
     <div class="header">
-      <h1>Banco Misión TIC</h1>
+      <h1>MedPies</h1>
       <nav>
         <button v-if="is_auth" v-on:click="loadHome">Inicio</button>
+        <button v-if="is_authp" v-on:click="loadProductos">Productos</button>
         <button v-if="is_auth" v-on:click="loadAccount">Cuenta</button>
         <button v-if="is_auth" v-on:click="logOut">Cerrar sesión</button>
         <button v-if="!is_auth" v-on:click="loadLogIn">Iniciar sesión</button>
@@ -20,7 +21,8 @@
     </div>
 
     <div class="footer">
-      <h2>Grupo 1 - Misión TIC 2022</h2>
+      <h2>Grupo 3 - Misión TIC 2022</h2>
+
     </div>
   </div>
 </template>
@@ -30,7 +32,8 @@ export default {
   name: 'App',
   data: function(){
     return{
-      is_auth: false
+      is_auth: false,
+      is_authp: true
     }
   },
   methods:{
@@ -40,6 +43,7 @@ export default {
         this.$router.push({name:'logIn'})
       else
         this.$router.push({name:'home'})
+
     },
     loadLogIn: function(){
       this.$router.push({name:'logIn'})
@@ -52,6 +56,9 @@ export default {
     },
     loadAccount:function(){
       this.$router.push({name:'account'})
+    },
+    loadProductos:function(){
+      this.$router.push({name:'Productos'})
     },
     logOut:function(){
       localStorage.clear()
