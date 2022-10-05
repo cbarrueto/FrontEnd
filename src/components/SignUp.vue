@@ -1,5 +1,6 @@
 <template>
   <div class="signUp_user">
+
     <div>
             
             
@@ -12,18 +13,18 @@
           <form v-on:submit.prevent="processSignUp">
               <input type="text"  v-model="user.username" placeholder="Nombre de usuario">
               <br>
-              <input type="password" v-model="user.password" placeholder="Contraseña">
+              <input type="password" v-model="user.password" placeholder="Contraseña:">
               <br>
-              <input type="text" v-model="user.name" placeholder="Nombre">
+              <input type="text" v-model="user.name" placeholder="Nombre:">
               <br>
-              <input type="email" v-model="user.email" placeholder="Correo Electrónico">
+              <input type="email" v-model="user.email" placeholder="Correo Electrónico:">
               <br>
-              <input type="number" v-model="user.account.balance" placeholder="Saldo Inicial">
+              <br>
               <br>
               <button type="submit">Registrarse</button>
           </form>
       </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -70,6 +71,22 @@ export default {
 </script>
 
 <style>
+
+.responsive {
+  border: 3px solid #283747;
+  border-radius: 10px;
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: right; 
+}
+
+.img{
+  float:left;
+}
+
 .signUp_user{
   margin: 0;
   padding: 0%;

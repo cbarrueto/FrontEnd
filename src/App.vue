@@ -1,11 +1,11 @@
 <template>
   <div id ="app" class="app">
     <div class="header">
-      
-        <img src="../src/logo.jpeg" alt="Nature"  class="img">
-     
-      
-
+      <h2><img src="../fotos/logoMedPies.png"></h2>
+         <h4>CENTRO PODOLÓGICO<h6>PRODUCTOS Y TRATAMIENTOS PARA SUS PIES</h6></h4>
+         
+         <!-- Width="10px" heigth="10px" -->
+         <!-- ../fotos/logo.jpg -->
       <nav>
         <button v-if="is_auth" v-on:click="loadHome">Inicio</button>
         <button v-if="is_authp" v-on:click="loadProductos">Productos</button>
@@ -52,7 +52,6 @@ export default {
         this.$router.push({name:'logIn'})
       else
         this.$router.push({name:'home'})
-
     },
 
     loadLogIn: function(){
@@ -89,7 +88,7 @@ export default {
       localStorage.setItem("isAuth",true),
       alert("Autenticación exitosa")
       this.verifyAuth()
-    }, 
+    },
     completedSignUp: function(data){
       alert("Registro exitoso")
       this.completedLogIn(data)
@@ -102,69 +101,77 @@ export default {
 </script>
 
 <style>
- body{
- margin: 0 0 0 0;
- }
+body{
+  margin: 0 0 0 0;
+  }
 .caja1{
   margin-left:35px;
   margin-bottom:20px;
 } 
- .header{
- margin: 0%;
- padding: 0;
- width: 100%;
- height: 10vh;
- min-height: 100px;
- background-color: #283747 ;
- color:#E5E7E9 ;
- display: flex;
-justify-content: space-between;
- align-items: center;
-}
- .header h1 {
- width: 20%;
- text-align: center;
-}
-.img {
+.header{
+  margin: 0%;
+  padding: 0;
   width: 100%;
   height: 10vh;
-  min-height : 100px;
+  min-height: 100px;
+  background-color: #283747 ;
+  color:#E5E7E9 ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
- .header nav {
- height: 100%;
- width: 20%;
- display: flex;
- justify-content: space-around;
- align-items: center;
- font-size: 20px;
+.header h1 {
+  width: 20%;
+  text-align: left;
+  margin: 30px;
+  }
+.header h2 {
+  /* width: 10px; */
+  /* height: 10px; */
+  display: flex;
+  /* text-indent: -999px; */
+  height: 90px;
+  width: 240px;
+  margin: none;
+  text-align: left;
+  margin: 15px;
 }
- .header nav button{
- color: #E5E7E9;
- background: #283747;
- border: 1px solid #E5E7E9;
- border-radius: 5px;
- padding: 10px 20px;
+.header nav {
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 20px;
+  margin: 15px;
 }
- .header nav button:hover{
- color: #283747;
- background: #E5E7E9;
- border: 1px solid #E5E7E9;
+  .header nav button{
+  color: #E5E7E9;
+  background: #283747;
+  border: 1px solid #E5E7E9;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
- .main-component{
- height: 75vh;
- margin: 0%;
- padding: 0%;
- background: #FDFEFE;
+.header nav button:hover{
+  color: #283747;
+  background: #E5E7E9;
+  border: 1px solid #E5E7E9;
 }
- .footer{
- margin:0;
- padding:0;
-width: 100%;
- height: 10vh;
- min-height: 100px;
- background-color: #283747;
- color: #E5E7E9;
- }
+.main-component{
+  height: 75vh;
+  margin: 0%;
+  padding: 0%;
+  background: #FDFEFE;
+}
+.footer{
+  margin:0;
+  padding:0;
+  width: 100%;
+  height: 10vh;
+  min-height: 100px;
+  background-color: #283747;
+  color: #E5E7E9;
+  }
  .footer h2{
  width: 100%;
  height: 100%;
