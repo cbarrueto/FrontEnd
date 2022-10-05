@@ -2,10 +2,10 @@
   <div id ="app" class="app">
     <div class="header">
       <h2><img src="../fotos/logoMedPies.png"></h2>
-         <h4>CENTRO PODOLÓGICO<h6>PRODUCTOS Y TRATAMIENTOS PARA SUS PIES</h6></h4>
-         
-         <!-- Width="10px" heigth="10px" -->
-         <!-- ../fotos/logo.jpg -->
+        <h3> CENTRO PODOLÓGICO <h4>PRODUCTOS Y TRATAMIENTOS PARA SUS PIES</h4></h3>
+        
+        <!-- Width="10px" heigth="10px" -->
+        <!-- ../fotos/logo.jpg -->
       <nav>
         <button v-if="is_auth" v-on:click="loadHome">Inicio</button>
         <button v-if="is_authp" v-on:click="loadProductos">Productos</button>
@@ -114,7 +114,7 @@ body{
   width: 100%;
   height: 10vh;
   min-height: 100px;
-  background-color: #283747 ;
+  background-color: #779fca ;
   color:#E5E7E9 ;
   display: flex;
   justify-content: space-between;
@@ -147,13 +147,13 @@ body{
 }
   .header nav button{
   color: #E5E7E9;
-  background: #283747;
+  background: #779fca;
   border: 1px solid #E5E7E9;
   border-radius: 5px;
   padding: 10px 20px;
 }
 .header nav button:hover{
-  color: #283747;
+  color: #779fca;
   background: #E5E7E9;
   border: 1px solid #E5E7E9;
 }
@@ -169,7 +169,7 @@ body{
   width: 100%;
   height: 10vh;
   min-height: 100px;
-  background-color: #283747;
+  background-color: #779fca;
   color: #E5E7E9;
   }
  .footer h2{

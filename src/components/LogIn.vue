@@ -32,7 +32,7 @@ export default {
     methods:{
         processLogInUser:function(){
             axios.post(
-                "https:////primero01.herokuapp.com/login/",
+                "https://primero01.herokuapp.com/login/",
                 this.user,
                 {headers:{}}
             )
