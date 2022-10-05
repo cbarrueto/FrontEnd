@@ -3,7 +3,6 @@
     <div class="header">
       
         <img src="../src/logo.jpeg" alt="Nature"  class="img">
-     
       
 
       <nav>
@@ -20,6 +19,7 @@
       <router-view  v-on:completedLogIn="completedLogIn"
                     v-on:completedSignUp = "completedSignUp"
                     v-on:logOut="logOut"
+                    
                     v-on:loadProductos="completeProductos"
                     
                     
