@@ -1,7 +1,11 @@
 <template>
   <div id ="app" class="app">
     <div class="header">
-      <h1>MedPies</h1>
+      
+        <img src="../src/logo.jpeg" alt="Nature"  class="img">
+     
+      
+
       <nav>
         <button v-if="is_auth" v-on:click="loadHome">Inicio</button>
         <button v-if="is_authp" v-on:click="loadProductos">Productos</button>
@@ -13,17 +17,21 @@
     </div>
 
     <div class="main-component">
-      <router-view v-on:completedLogIn="completedLogIn"
-                   v-on:completedSignUp = "completedSignUp"
-                   v-on:logOut="logOut">
-
+      <router-view  v-on:completedLogIn="completedLogIn"
+                    v-on:completedSignUp = "completedSignUp"
+                    v-on:logOut="logOut"
+                    v-on:loadProductos="completeProductos"
+                    
+                    
+                    >
       </router-view>
-    </div>
-
-    <div class="footer">
+      <div class="footer">
       <h2>Grupo 3 - Misión TIC 2022</h2>
 
     </div>
+    </div>
+
+
   </div>
 </template>
 
@@ -33,7 +41,8 @@ export default {
   data: function(){
     return{
       is_auth: false,
-      is_authp: true
+      is_authp: true,
+      
     }
   },
   methods:{
@@ -45,6 +54,7 @@ export default {
         this.$router.push({name:'home'})
 
     },
+
     loadLogIn: function(){
       this.$router.push({name:'logIn'})
     },
@@ -60,6 +70,13 @@ export default {
     loadProductos:function(){
       this.$router.push({name:'Productos'})
     },
+
+    completeProductos:function(data){
+
+    },
+
+
+
     logOut:function(){
       localStorage.clear()
       alert("Sesión cerrada")
@@ -88,6 +105,10 @@ export default {
  body{
  margin: 0 0 0 0;
  }
+.caja1{
+  margin-left:35px;
+  margin-bottom:20px;
+} 
  .header{
  margin: 0%;
  padding: 0;
@@ -103,6 +124,11 @@ justify-content: space-between;
  .header h1 {
  width: 20%;
  text-align: center;
+}
+.img {
+  width: 100%;
+  height: 10vh;
+  min-height : 100px;
 }
  .header nav {
  height: 100%;

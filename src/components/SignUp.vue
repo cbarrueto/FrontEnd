@@ -3,12 +3,11 @@
     <div>
             
             
-      <img src="https://medicpies.com/wp-content/uploads/2019/12/YA.jpg" alt="Prueba" width="800" height="450">
+      <img src="https://medicpies.com/wp-content/uploads/2019/12/YA.jpg" alt="Nature" class="responsive">
             
             
           </div>
       <div class="container_signUp_user">
-         
           <h2>Registro de usuario</h2>
           <form v-on:submit.prevent="processSignUp">
               <input type="text"  v-model="user.username" placeholder="Nombre de usuario">
@@ -89,6 +88,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.responsive {
+  width: 100%;
+  height: auto;
 }
 .signUp_user h2
 {
