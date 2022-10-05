@@ -1,7 +1,11 @@
 <template>
   <div id ="app" class="app">
     <div class="header">
-      <h1>MedPies</h1>
+      <h2><img src="../fotos/logoMedPies.png"></h2>
+         <h4>CENTRO PODOLÓGICO<h6>PRODUCTOS Y TRATAMIENTOS PARA SUS PIES</h6></h4>
+         
+         <!-- Width="10px" heigth="10px" -->
+         <!-- ../fotos/logo.jpg -->
       <nav>
         <button v-if="is_auth" v-on:click="loadHome">Inicio</button>
         <button v-if="is_authp" v-on:click="loadProductos">Productos</button>
@@ -103,6 +107,17 @@ body{
   width: 20%;
   text-align: left;
   margin: 30px;
+  }
+.header h2 {
+  /* width: 10px; */
+  /* height: 10px; */
+  display: flex;
+  /* text-indent: -999px; */
+  height: 90px;
+  width: 240px;
+  margin: none;
+  text-align: left;
+  margin: 15px;
 }
 .header nav {
   height: 100%;
